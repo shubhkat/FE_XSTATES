@@ -22,7 +22,7 @@ const useLocationData = () => {
 
     useEffect(() => {
         if (selectedCountry) {
-            axios.get("https://crio-location-selector.onrender.com/countries").then((res) => {
+            axios.get(`https://crio-location-selector.onrender.com/country=${selectedCountry}/states`).then((res) => {
                 setStates(res.data);
                 setSelectedState("");
                 setCities([]);
@@ -35,7 +35,7 @@ const useLocationData = () => {
 
     useEffect(() => {
         if (selectedCountry && selectedState) {
-            axios.get("https://crio-location-selector.onrender.com/countries").then((res) => {
+            axios.get(`https://crio-location-selector.onrender.com/country=${selectedCountry}/state=${selectedState}/cities`).then((res) => {
                 setCities(res.data);
                 setSelectedCity("");
             }).catch((err) => {
