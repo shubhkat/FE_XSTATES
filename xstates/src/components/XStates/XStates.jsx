@@ -44,11 +44,11 @@ const XStates = () => {
           <option value="" disabled>Select Country</option>
           {countriesDropdown}
         </select>
-        <select value={selectedState} onChange={(e) => setSelectedState(e.target.value)} className={styles.eachSelect}>
+        <select value={selectedState} onChange={(e) => setSelectedState(e.target.value)} className={styles.eachSelect} disabled={!selectedCountry}>
           <option value="" disabled={!selectedCountry}>Select State</option>
           {statesDropdown}
         </select>
-        <select value={selectedCity} onChange={(e) => setSelectedCity(e.target.value)} className={styles.eachSelect}>
+        <select value={selectedCity} onChange={(e) => setSelectedCity(e.target.value)} className={styles.eachSelect} disabled={!selectedState}>
           <option value="" disabled={!selectedState}>Select City</option>
           {citiesDropdown}
         </select>
