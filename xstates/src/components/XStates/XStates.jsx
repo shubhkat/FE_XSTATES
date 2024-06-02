@@ -54,8 +54,7 @@ const XStates = () => {
         </select>
       </div>
       {selectedCity && (
-        // <h2 className={styles.result}>You Selected <span className={styles.city}>{selectedCity}</span>, <span className={styles.stateCountry}>{selectedState}, {selectedCountry}</span></h2>
-        <h2>You Selected {selectedCity}, {selectedState}, {selectedCountry}</h2>
+        <h2 className={styles.result}>You selected <span className={styles.city}>{selectedCity}</span>, <span className={styles.stateCountry}>{selectedState}, {selectedCountry}</span></h2>
       )}
     </div>
   )
